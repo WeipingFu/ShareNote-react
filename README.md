@@ -10,5 +10,5 @@
 4. 笔记多层评论回复功能
 5. 笔记搜索功能
 
-[API 接口设计][https://github.com/WeipingFu/ShareNote-react/blob/master/server/api.md]
+[API 接口设计](https://github.com/WeipingFu/ShareNote-react/blob/master/server/api.md)
 
