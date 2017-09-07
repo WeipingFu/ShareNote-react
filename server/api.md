@@ -45,15 +45,13 @@
 
   1) 成功：username, token(使用jwt)
   
-     示例：json {"username": username, "token": token}
+          示例：json {"username": username, "token": token}
      
   2) 失败：错误信息
   
-     示例： 若用户名被占，返回 json{"error": "USERNAME_TAKEN"};
-     
-     若邮箱已注册，返回 json{"error": "EMAIL_TAKEN"};
-     
-     其他错误，返回 json {"error": "GENERAL_ERROR"}
+          示例： 若用户名被占，返回 json{"error": "USERNAME_TAKEN"};
+          若邮箱已注册，返回 json{"error": "EMAIL_TAKEN"};
+          其他错误，返回 json {"error": "GENERAL_ERROR"}
 
 **3. 用户登出**
 
@@ -67,7 +65,7 @@
 
   1）成功：success
   
-     示例：json {"success": 'LOGOUT_SUCCESS'}
+       示例：json {"success": 'LOGOUT_SUCCESS'}
      
   2) 失败：失败信息
      
@@ -83,7 +81,7 @@
 
   1）成功：user对象
   
-     示例：json {"user": user}
+      示例：json {"user": user}
   
 **5. 修改用户信息**
 
@@ -99,7 +97,7 @@
 
   1）成功：success
   
-     示例：json {"success": "USER_UPDATE_SUCCESS"}
+      示例：json {"success": "USER_UPDATE_SUCCESS"}
 
 **6. 查看用户评论**
 
@@ -113,7 +111,7 @@
 
   1）成功：用户所有的评论内容
   
-     示例：json {"comments": comments}
+      示例：json {"comments": comments}
      
   2) 失败：失败信息
 
@@ -129,7 +127,7 @@
 
   1）成功：用户接收到的所有消息
   
-     示例：json {"messages": messages}
+      示例：json {"messages": messages}
      
   2) 失败：失败信息
   
@@ -147,7 +145,7 @@
 
   1）成功：该用户所有的note
   
-     示例：json {"notes": notes}
+      示例：json {"notes": notes}
      
   2) 失败：失败信息
 
@@ -164,12 +162,12 @@
 返回参数：
   1）成功：success
   
-     示例：json {"success": "ADD_NOTE_SUCCESS"}
+      示例：json {"success": "ADD_NOTE_SUCCESS"}
      
   2) 失败：
-  若笔记标题重复，返回 json {"error": "NOTE_EXIST"};
   
-  其他错误， 返回 json {"error": "ADD_NOTE_ERROR"}
+          若笔记标题重复，返回 json {"error": "NOTE_EXIST"}
+          其他错误， 返回 json {"error": "ADD_NOTE_ERROR"}
 
 **3. 修改笔记**
 
@@ -185,14 +183,13 @@
 
   1）成功：success
   
-     示例：json {"success": "UPDATE_NOTE_SUCCESS"}
+      示例：json {"success": "UPDATE_NOTE_SUCCESS"}
      
   2) 失败：
-  若修改后的笔记标题和已存在的某个其他笔记一样，返回 json {"error": "NOTE_TITLE_EXIST"};
-  
-  若指定笔记不存在，返回 json {"error": "NOTE_NOT_EXIST"};
            
-  其他错误， 返回 json {"error": "UPDATE_NOTE_ERROR"}
+          若修改后的笔记标题和已存在的某个其他笔记一样，返回 json {"error": "NOTE_TITLE_EXIST"};
+          若指定笔记不存在，返回 json {"error": "NOTE_NOT_EXIST"};
+          其他错误， 返回 json {"error": "UPDATE_NOTE_ERROR"}
 
 **4. 删除单个笔记**
 
@@ -206,12 +203,12 @@
 
   1）成功：success
   
-     示例：json {"success": "DELETE_NOTE_SUCCESS"}
+      示例：json {"success": "DELETE_NOTE_SUCCESS"}
      
   2) 失败：
-  若指定笔记不存在，返回 json {"error": "NOTE_NOT_EXIST"};
   
-  其他错误， 返回 json {"error": "DELETE_NOTE_ERROR"}
+          若指定笔记不存在，返回 json {"error": "NOTE_NOT_EXIST"};
+          其他错误， 返回 json {"error": "DELETE_NOTE_ERROR"}
            
 **5. 按条件删除用户的笔记**
 
@@ -227,12 +224,12 @@
 
   1）成功：success
   
-     示例：json {"success": "DELETE_NOTE_SUCCESS"}
+      示例：json {"success": "DELETE_NOTE_SUCCESS"}
      
   2) 失败：
-  若指定笔记不存在，返回 json {"error": "NOTE_NOT_EXIST"};
   
-  其他错误， 返回 json {"error": "DELETE_NOTE_ERROR"}
+          若指定笔记不存在，返回 json {"error": "NOTE_NOT_EXIST"};
+          其他错误， 返回 json {"error": "DELETE_NOTE_ERROR"}
            
 **6. 按条件查看指定用户的笔记** 
 
@@ -248,7 +245,7 @@
 
   1）成功：笔记集合
   
-     示例：json {"notes": notes}
+      示例：json {"notes": notes}
      
   2) 失败：失败信息
   
@@ -264,7 +261,7 @@
 
   1）成功：笔记集合
   
-     示例：json {"notes": notes}
+      示例：json {"notes": notes}
      
   2) 失败：失败信息
            
@@ -280,7 +277,7 @@
 返回参数：
   1）成功：笔记集合
   
-     示例：json {"notes": notes}
+      示例：json {"notes": notes}
      
   2) 失败：失败信息
   
@@ -298,7 +295,7 @@
 
   1）成功：笔记本集合
   
-     示例：json {"notebooks": notebooks}
+      示例：json {"notebooks": notebooks}
      
   2) 失败：失败信息
   
@@ -316,7 +313,7 @@
 
   1）成功：成功信息
   
-     示例：json {"success": 'ADD_NOTEBOOK_SUCCESS'}
+      示例：json {"success": 'ADD_NOTEBOOK_SUCCESS'}
      
   2) 失败：失败信息
 
@@ -332,7 +329,7 @@
 
   1）成功：评论对象的集合
   
-     示例：json {"comments": comments}
+      示例：json {"comments": comments}
      
   2) 失败：失败信息
   
@@ -350,7 +347,7 @@
 
   1）成功：成功信息
   
-     示例：json {"success": ‘ADD_COMMENT_SUCCESS’}
+      示例：json {"success": ‘ADD_COMMENT_SUCCESS’}
      
   2) 失败：失败信息
   
