@@ -154,7 +154,7 @@
      示例：json {"notes": notes}
   2) 失败：失败信息
   
-### 笔记本相关
+### 三、笔记本相关
 **1. 获取用户所有的笔记本**
 请求url： /auth/notebooks/:username
 请求方法：GET
@@ -174,7 +174,7 @@
      示例：json {"success": 'ADD_NOTEBOOK_SUCCESS'}
   2) 失败：失败信息
 
-### 评论相关
+### 四、评论相关
 **1. 获取笔记评论**
 请求url： /comments/:note_id
 请求方法：GET
