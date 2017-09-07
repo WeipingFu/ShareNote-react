@@ -25,15 +25,13 @@
 
   1) 成功：username, token(使用jwt)
   
-     示例：json {"username": username, "token": token}
+          示例：json {"username": username, "token": token}
      
   2) 失败：错误信息
   
-     示例： 若用户不存在，返回 json{"error": "USER_NOT_FOUND"};
-     
-     若密码不正确，返回 json{"error": "USER_NOT_FOUND"};
-     
-     其他错误，返回 json {"error": "GENERAL_ERROR"}
+          示例： 若用户不存在，返回 json{"error": "USER_NOT_FOUND"};
+          若密码不正确，返回 json{"error": "USER_NOT_FOUND"};
+          其他错误，返回 json {"error": "GENERAL_ERROR"}
      
 **2. 用户注册**
 
