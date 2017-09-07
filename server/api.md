@@ -168,9 +168,10 @@
   
      示例：json {"success": "ADD_NOTE_SUCCESS"}
      
-  2) 失败：若笔记标题重复，返回 json {"error": "NOTE_EXIST"};
+  2) 失败：
+  若笔记标题重复，返回 json {"error": "NOTE_EXIST"};
   
-           其他错误， 返回 json {"error": "ADD_NOTE_ERROR"}
+  其他错误， 返回 json {"error": "ADD_NOTE_ERROR"}
 
 **3. 修改笔记**
 
@@ -188,11 +189,12 @@
   
      示例：json {"success": "UPDATE_NOTE_SUCCESS"}
      
-  2) 失败：若修改后的笔记标题和已存在的某个其他笔记一样，返回 json {"error": "NOTE_TITLE_EXIST"};
+  2) 失败：
+  若修改后的笔记标题和已存在的某个其他笔记一样，返回 json {"error": "NOTE_TITLE_EXIST"};
   
-           若指定笔记不存在，返回 json {"error": "NOTE_NOT_EXIST"};
+  若指定笔记不存在，返回 json {"error": "NOTE_NOT_EXIST"};
            
-           其他错误， 返回 json {"error": "UPDATE_NOTE_ERROR"}
+  其他错误， 返回 json {"error": "UPDATE_NOTE_ERROR"}
 
 **4. 删除单个笔记**
 
@@ -208,85 +210,149 @@
   
      示例：json {"success": "DELETE_NOTE_SUCCESS"}
      
-  2) 失败：若指定笔记不存在，返回 json {"error": "NOTE_NOT_EXIST"};
+  2) 失败：
+  若指定笔记不存在，返回 json {"error": "NOTE_NOT_EXIST"};
   
-           其他错误， 返回 json {"error": "DELETE_NOTE_ERROR"}
+  其他错误， 返回 json {"error": "DELETE_NOTE_ERROR"}
            
 **5. 按条件删除用户的笔记**
 
 请求url： /auth/notes/:username
+
 请求方法：DELETE
+
 请求参数：url参数 （查询条件）
+
 请求头："x-access-token": localStorage.getItem('token')
+
 返回参数：
+
   1）成功：success
+  
      示例：json {"success": "DELETE_NOTE_SUCCESS"}
-  2) 失败：若指定笔记不存在，返回 json {"error": "NOTE_NOT_EXIST"};
-           其他错误， 返回 json {"error": "DELETE_NOTE_ERROR"}
+     
+  2) 失败：
+  若指定笔记不存在，返回 json {"error": "NOTE_NOT_EXIST"};
+  
+  其他错误， 返回 json {"error": "DELETE_NOTE_ERROR"}
            
 **6. 按条件查看指定用户的笔记** 
+
 请求url： /auth/notes/:username
+
 请求方法：GET
+
 请求参数：url参数（query）
+
 请求头："x-access-token": localStorage.getItem('token')
+
 返回参数：
+
   1）成功：笔记集合
+  
      示例：json {"notes": notes}
+     
   2) 失败：失败信息
   
 **7. 查看用户收藏的笔记**
+
 请求url： /auth/notes/collection/:username
+
 请求方法：GET
+
 请求头："x-access-token": localStorage.getItem('token')
+
 返回参数：
+
   1）成功：笔记集合
+  
      示例：json {"notes": notes}
+     
   2) 失败：失败信息
            
 **8. 按条件查看所有用户的笔记**
+
 请求url： /notes
+
 请求方法：GET
+
 请求参数：url参数
+
+
 返回参数：
   1）成功：笔记集合
+  
      示例：json {"notes": notes}
+     
   2) 失败：失败信息
   
 ### 三、笔记本相关
+
 **1. 获取用户所有的笔记本**
+
 请求url： /auth/notebooks/:username
+
 请求方法：GET
+
 请求头："x-access-token": localStorage.getItem('token')
+
 返回参数：
+
   1）成功：笔记本集合
+  
      示例：json {"notebooks": notebooks}
+     
   2) 失败：失败信息
   
 **2. 添加笔记本**
+
 请求url： /auth/notebooks/:username
+
 请求方法：POST
+
 请求参数：json{"bookname": bookname, "info": info, "user": user}
+
 请求头："x-access-token": localStorage.getItem('token')
+
 返回参数：
+
   1）成功：成功信息
+  
      示例：json {"success": 'ADD_NOTEBOOK_SUCCESS'}
+     
   2) 失败：失败信息
 
 ### 四、评论相关
+
 **1. 获取笔记评论**
+
 请求url： /comments/:note_id
+
 请求方法：GET
+
 返回参数：
+
   1）成功：评论对象的集合
+  
      示例：json {"comments": comments}
+     
   2) 失败：失败信息
   
 **2. 添加评论**
+
 请求url： /auth/comments/:username
+
 请求方法：POST
+
 请求参数：json{"content": content, "user": user, "entity_id": entity_id, "entity_type": entity_type, "to_user_id": to_user_id}
+
 请求头："x-access-token": localStorage.getItem('token')
+
 返回参数：
+
   1）成功：成功信息
+  
      示例：json {"success": ‘ADD_COMMENT_SUCCESS’}
+     
   2) 失败：失败信息
+  
