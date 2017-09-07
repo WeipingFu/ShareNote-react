@@ -1,9 +1,10 @@
 参照 Restful API 标准设计了以下接口：
 凡是有/auth/的url都要利用token经过用户验证才能进行下一步操作
 验证成功：赋值 req.username = username
-验证失败：若token不存在，返回 json{"error": "TOKEN_NOT_EXIST"};
-          若token中用户名与参数中的用户名不一致，返回 json{"error": "TOKEN_ERR"};
-          若token已经过期，返回 json{"error": "TOKEN_EXP"}
+验证失败：
+若token不存在，返回 json{"error": "TOKEN_NOT_EXIST"};
+若token中用户名与参数中的用户名不一致，返回 json{"error": "TOKEN_ERR"};
+若token已经过期，返回 json{"error": "TOKEN_EXP"}
 ### 一、用户管理
 **1. 用户登录**
 请求url： /users/login
