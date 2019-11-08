@@ -25,7 +25,7 @@
     "jwt-simple": "^0.5.1",
     "moment": "^2.18.1",
     "mongodb": "^2.2.28",
-    "mongoose": "^4.10.4",
+    "mongoose": "^5.7.8",
     "morgan": "^1.8.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
